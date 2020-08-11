@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#4F4F50</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="resetTitleBg">#105A13</color>
+    <color name="resetTitleText">#F57C00</color>
+    <color name="blueTeam">#4123D8</color>
+    <color name="redTeam">#E10000</color>
+    <color name="redTeambx">#A80000</color>
+    <color name="blueTeambx">#2E1998</color>
+    <color name="teamTextBg">#5DEF58</color>
+    <color name="canvasBackground">#00F652</color>
+</resources>

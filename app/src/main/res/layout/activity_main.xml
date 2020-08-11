@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/topTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/resetTitleBg"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="Dots And Boxes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/resetTitleText" />
+
+    <LinearLayout
+        android:id="@+id/scoreLayout"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_below="@+id/topTitleTextView"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/redScoreTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/redTeam"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/blueScoreTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/blueTeam"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="35sp" />
+    </LinearLayout>
+
+    <com.example.dotsandboxes.custviews.CanvasView
+        android:id="@+id/gameCanvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/scoreLayout"
+        android:layout_marginTop="0dp" />
+
+    <RelativeLayout
+        android:id="@+id/gridSizeChoice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topTitleTextView"
+        android:layout_marginTop="0dp"
+        android:background="#18811C"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/gridSizeChoiceText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="Select the size of the grid."
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#D3C22E"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/gridButton3x4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gridSizeChoiceText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="#A1E355"
+            android:onClick="setGridSize1"
+            android:paddingLeft="35dp"
+            android:paddingTop="20dp"
+            android:paddingRight="35dp"
+            android:paddingBottom="20dp"
+            android:text=" 3 x 4"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/gridButton4x5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gridButton3x4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="#A1E355"
+            android:onClick="setGridSize2"
+            android:paddingLeft="35dp"
+            android:paddingTop="20dp"
+            android:paddingRight="35dp"
+            android:paddingBottom="20dp"
+            android:text="4 X 5"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
